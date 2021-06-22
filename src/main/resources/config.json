@@ -1,0 +1,148 @@
+{
+  "tiles": [
+    {
+      "name": "A",
+      "segments": { "North": "Field", "East": "Field", "South": "Road", "West": "Field", "Center": "Monastery" },
+      "shield": false,
+      "amount": 2
+    },
+    {
+      "name": "B",
+      "segments": { "North": "Field", "East": "Field", "South": "Field", "West": "Field", "Center": "Monastery" },
+      "shield": false,
+      "amount": 4
+    },
+    {
+      "name": "C",
+      "segments": { "North": "City", "East": "City", "South": "City", "West": "City", "Center": "City" },
+      "shield": true,
+      "amount": 1
+    },
+    {
+      "name": "D",
+      "segments": { "North": "Road", "East": "City", "South": "Road", "West": "Field", "Center": "Road" },
+      "shield": false,
+      "amount": 4
+    },
+    {
+      "name": "E",
+      "segments": { "North": "City", "East": "Field", "South": "Field", "West": "Field", "Center": "Field" },
+      "shield": false,
+      "amount": 5
+    },
+    {
+      "name": "F",
+      "segments": { "North": "Field", "East": "City", "South": "Field", "West": "City", "Center": "City" },
+      "shield": true,
+      "amount": 2
+    },
+    {
+      "name": "G",
+      "segments": { "North": "City", "East": "Field", "South": "City", "West": "Field", "Center": "City" },
+      "shield": false,
+      "amount": 1
+    },
+    {
+      "name": "H",
+      "segments": { "North": "Field", "East": "City", "South": "Field", "West": "City", "Center": "Field" },
+      "shield": false,
+      "amount": 3
+    },
+    {
+      "name": "I",
+      "segments": { "North": "Field", "East": "City", "South": "City", "West": "Field", "Center": "Field" },
+      "shield": false,
+      "amount": 2
+    },
+    {
+      "name": "J",
+      "segments": { "North": "City", "East": "Road", "South": "Road", "West": "Field", "Center": "Road" },
+      "shield": false,
+      "amount": 3
+    },
+    {
+      "name": "K",
+      "segments": { "North": "Road", "East": "City", "South": "Field", "West": "Road", "Center": "Road" },
+      "shield": false,
+      "amount": 3
+    },
+    {
+      "name": "L",
+      "segments": { "North": "Road", "East": "City", "South": "Road", "West": "Road", "Center": "Village" },
+      "shield": false,
+      "amount": 3
+    },
+    {
+      "name": "M",
+      "segments": { "North": "City", "East": "Field", "South": "Field", "West": "City", "Center": "City" },
+      "shield": true,
+      "amount": 2
+    },
+    {
+      "name": "N",
+      "segments": { "North": "City", "East": "Field", "South": "Field", "West": "City", "Center": "City" },
+      "shield": false,
+      "amount": 3
+    },
+    {
+      "name": "O",
+      "segments": { "North": "City", "East": "Road", "South": "Road", "West": "City", "Center": "RoadCity" },
+      "shield": true,
+      "amount": 2
+    },
+    {
+      "name": "P",
+      "segments": { "North": "City", "East": "Road", "South": "Road", "West": "City", "Center": "RoadCity" },
+      "shield": false,
+      "amount": 3
+    },
+    {
+      "name": "Q",
+      "segments": { "North": "City", "East": "City", "South": "Field", "West": "City", "Center": "City" },
+      "shield": true,
+      "amount": 1
+    },
+    {
+      "name": "R",
+      "segments": { "North": "City", "East": "City", "South": "Field", "West": "City", "Center": "City" },
+      "shield": false,
+      "amount": 3
+    },
+    {
+      "name": "S",
+      "segments": { "North": "City", "East": "City", "South": "Road", "West": "City", "Center": "City" },
+      "shield": true,
+      "amount": 2
+    },
+    {
+      "name": "T",
+      "segments": { "North": "City", "East": "City", "South": "Road", "West": "City", "Center": "City" },
+      "shield": false,
+      "amount": 1
+    },
+    {
+      "name": "U",
+      "segments": { "North": "Road", "East": "Field", "South": "Road", "West": "Field", "Center": "Road" },
+      "shield": false,
+      "amount": 8
+    },
+    {
+      "name": "V",
+      "segments": { "North": "Field", "East": "Field", "South": "Road", "West": "Road", "Center": "Road" },
+      "shield": false,
+      "amount": 9
+    },
+    {
+      "name": "W",
+      "segments": { "North": "Field", "East": "Road", "South": "Road", "West": "Road", "Center": "Village" },
+      "shield": false,
+      "amount": 4
+    },
+    {
+      "name": "X",
+      "segments": { "North": "Road", "East": "Road", "South": "Road", "West": "Road", "Center": "Village" },
+      "shield": false,
+      "amount": 1
+    }
+  ]
+}
