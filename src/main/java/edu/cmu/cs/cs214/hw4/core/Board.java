@@ -24,14 +24,9 @@ public class Board {
    * @param t Tile to place
    * @param x x coordinate
    * @param y y coordinate
-   * @return place success or not.
    */
-  public boolean placeTileOnBoard(Tile t, int x, int y) {
-    if (x < 0 || x >= tiles.length || y < 0 || y > tiles[0].length) {
-      return false;
-    }
+  public void placeTileOnBoard(Tile t, int x, int y) {
     tiles[x][y] = new Tile(t);
-    return true;
   }
 
   /**
@@ -93,18 +88,17 @@ public class Board {
    */
   public boolean isPlaceableCell(Tile t, int x, int y) {
     Tile[] neighbors = neighborTiles(x, y);
+    // no neighbors
     if (neighbors[0] == null && neighbors[1] == null && neighbors[2] == null && neighbors[3] == null) {
       return false;
     }
-    for (int i = 0; i < GameImpl.NUM_TILE_EDGES; i++) {
-      if ((neighbors[0] == null || neighbors[0].getSegments().get("South").getName().equals(t.getSegments().get("North").getName()))
-          && (neighbors[1] == null || neighbors[1].getSegments().get("West").getName().equals(t.getSegments().get("East").getName()))
-          && (neighbors[2] == null || neighbors[2].getSegments().get("North").getName().equals(t.getSegments().get("South").getName()))
-          && (neighbors[3] == null || neighbors[3].getSegments().get("East").getName().equals(t.getSegments().get("West").getName()))
-      ) {
-        return true;
-      }
-      t.rotate();
+    // at least 1 matching segment
+    if ((neighbors[0] == null || neighbors[0].getSegments().get("South").getName().equals(t.getSegments().get("North").getName()))
+        && (neighbors[1] == null || neighbors[1].getSegments().get("West").getName().equals(t.getSegments().get("East").getName()))
+        && (neighbors[2] == null || neighbors[2].getSegments().get("North").getName().equals(t.getSegments().get("South").getName()))
+        && (neighbors[3] == null || neighbors[3].getSegments().get("East").getName().equals(t.getSegments().get("West").getName()))
+    ) {
+      return true;
     }
     return false;
   }
@@ -317,5 +311,12 @@ public class Board {
     for (Feature f : features) {
       f.scoreIncompleteFeature(players);
     }
+  }
+
+  public boolean isCellValid(Tile currentTile, int x, int y) {
+    return (x >= 0 && x < tiles.length && y >= 0 && y < tiles[0].length &&
+            isCellEmpty(x, y) &&
+            isPlaceableCell(currentTile, x, y)
+    );
   }
 }

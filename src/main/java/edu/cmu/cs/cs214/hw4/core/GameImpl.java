@@ -73,10 +73,7 @@ public class GameImpl implements Game {
    * @return whether successfully place a tile or not
    */
   public boolean placeTile(int x, int y) {
-    if (!board.isCellEmpty(x, y)) {
-      return false;
-    }
-    if (!board.isPlaceableCell(currentTile, x, y)) {
+    if (!board.isCellValid(currentTile, x, y)) {
       return false;
     }
     board.placeTileOnBoard(currentTile, x, y);
